@@ -1,0 +1,435 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Work With Me" activeNav="work-with-me">
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-label">Let&rsquo;s Work Together</span>
+      <h1>Simple Ways to Get Started</h1>
+      <p>
+        Whether you want a single focused session or an ongoing advisory relationship,
+        here&rsquo;s how to begin.
+      </p>
+    </div>
+  </div>
+
+  <!-- LUNCH & LEARN -->
+  <section class="lunch-section">
+    <div class="lunch-inner">
+      <div class="lunch-text">
+        <span class="section-label">Popular Starting Point</span>
+        <h2>Lunch &amp; Learn Sessions</h2>
+        <p>
+          A Lunch &amp; Learn is the lowest-friction way to experience what working
+          with me looks like. We design a focused 90-minute to half-day session
+          around a topic your team is actively wrestling with &mdash; then work
+          through it together, live.
+        </p>
+        <p>
+          These sessions are interactive, not lecture-based. Your team will leave
+          with frameworks they can use immediately and a clear sense of next steps.
+        </p>
+        <a href="#booking-form" class="btn-teal">Request a Session</a>
+      </div>
+      <div class="takeaways-card">
+        <h3>What Teams Walk Away With</h3>
+        <ul class="takeaways-list">
+          <li>
+            <span class="takeaway-icon">&#10003;</span>
+            A shared language for the challenge at hand
+          </li>
+          <li>
+            <span class="takeaway-icon">&#10003;</span>
+            Practical frameworks, not theoretical models
+          </li>
+          <li>
+            <span class="takeaway-icon">&#10003;</span>
+            Named tensions that were previously unnamed
+          </li>
+          <li>
+            <span class="takeaway-icon">&#10003;</span>
+            Clear ownership and 30-day follow-through items
+          </li>
+          <li>
+            <span class="takeaway-icon">&#10003;</span>
+            Resource pack customized to your session topic
+          </li>
+          <li>
+            <span class="takeaway-icon">&#10003;</span>
+            Optional 30-day check-in included
+          </li>
+        </ul>
+        <div class="takeaways-footer">
+          <span>Available as in-person or virtual sessions</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING FORM -->
+  <section class="booking-section" id="booking-form">
+    <div class="booking-inner">
+      <div class="booking-header">
+        <span class="section-label">Get in Touch</span>
+        <h2>Tell Me About Your Situation</h2>
+        <p>
+          The more context you share, the better I can assess fit and come to any
+          initial call prepared. All inquiries are handled directly by me.
+        </p>
+      </div>
+      <form class="booking-form" name="work-with-me" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Jane" required />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Smith" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="role">Your Role &amp; Company</label>
+          <input type="text" id="role" name="role" placeholder="CEO at Acme Corp" required />
+        </div>
+        <div class="form-group">
+          <label for="interest">What are you most interested in?</label>
+          <select id="interest" name="interest" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="advisory">Strategic Advisory (ongoing)</option>
+            <option value="coaching">Executive Coaching (1:1)</option>
+            <option value="team">Team Alignment Session</option>
+            <option value="lunch">Lunch &amp; Learn</option>
+            <option value="other">Not sure yet &mdash; let&rsquo;s talk</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="context">What&rsquo;s the situation? (The more detail, the better)</label>
+          <textarea id="context" name="context" rows="5" placeholder="What challenge are you navigating? What would a successful outcome look like in 6 months?" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="timeline">What&rsquo;s your timeline?</label>
+          <select id="timeline" name="timeline">
+            <option value="" disabled selected>Select a range</option>
+            <option value="asap">As soon as possible</option>
+            <option value="1month">Within 1 month</option>
+            <option value="quarter">This quarter</option>
+            <option value="planning">Planning for Q3/Q4</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-teal form-submit">Send My Inquiry &rarr;</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- WHAT COMES NEXT -->
+  <section class="next-section">
+    <div class="next-inner">
+      <div class="next-header">
+        <span class="section-label">What to Expect</span>
+        <h2>What Comes Next</h2>
+      </div>
+      <div class="next-cards">
+        <div class="next-card">
+          <div class="next-num">01</div>
+          <h3>Intake Review</h3>
+          <p>
+            I read every inquiry personally. Within 48 hours, you&rsquo;ll hear back
+            with my honest assessment of fit and suggested next steps.
+          </p>
+        </div>
+        <div class="next-card">
+          <div class="next-num">02</div>
+          <h3>Discovery Call</h3>
+          <p>
+            A 30-minute conversation to understand your situation in depth, answer
+            your questions, and determine if there&rsquo;s a strong match.
+          </p>
+        </div>
+        <div class="next-card">
+          <div class="next-num">03</div>
+          <h3>Proposal &amp; Kickoff</h3>
+          <p>
+            If we&rsquo;re aligned, I&rsquo;ll send a simple engagement proposal. Once confirmed,
+            we schedule our first working session and begin.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .lunch-section {
+    padding: 100px 0;
+    background: var(--white);
+  }
+
+  .lunch-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 48px;
+    display: grid;
+    grid-template-columns: 1fr 460px;
+    gap: 72px;
+    align-items: start;
+  }
+
+  .lunch-text .section-label {
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  .lunch-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .lunch-text p {
+    font-size: 1rem;
+    color: var(--gray-dark);
+    line-height: 1.75;
+    margin-bottom: 16px;
+  }
+
+  .lunch-text .btn-teal {
+    margin-top: 8px;
+  }
+
+  .takeaways-card {
+    background: var(--navy);
+    border-radius: 16px;
+    padding: 40px 36px;
+  }
+
+  .takeaways-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 24px;
+  }
+
+  .takeaways-list {
+    list-style: none;
+    margin-bottom: 28px;
+  }
+
+  .takeaways-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.6;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .takeaways-list li:last-child {
+    border-bottom: none;
+  }
+
+  .takeaway-icon {
+    color: var(--teal-light);
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .takeaways-footer {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.04em;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .booking-section {
+    padding: 100px 0;
+    background: var(--off-white);
+  }
+
+  .booking-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  .booking-header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .booking-header .section-label {
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  .booking-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.25;
+    margin-bottom: 16px;
+  }
+
+  .booking-header p {
+    font-size: 1rem;
+    color: var(--gray-mid);
+    line-height: 1.7;
+  }
+
+  .booking-form {
+    background: var(--white);
+    border: 1px solid rgba(30,58,95,0.08);
+    border-radius: 16px;
+    padding: 48px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.02em;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text);
+    background: var(--off-white);
+    border: 1px solid rgba(30,58,95,0.12);
+    border-radius: 8px;
+    padding: 12px 16px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--teal);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .form-submit {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 32px;
+    font-size: 1rem;
+    margin-top: 8px;
+    border: none;
+  }
+
+  .next-section {
+    padding: 100px 0;
+    background: var(--white);
+  }
+
+  .next-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  .next-header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .next-header .section-label {
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  .next-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.25;
+  }
+
+  .next-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .next-card {
+    background: var(--off-white);
+    border: 1px solid rgba(30,58,95,0.07);
+    border-radius: 16px;
+    padding: 40px 32px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .next-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(30,58,95,0.09);
+  }
+
+  .next-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--teal);
+    opacity: 0.5;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .next-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+
+  .next-card p {
+    font-size: 0.92rem;
+    color: var(--gray-dark);
+    line-height: 1.7;
+  }
+</style>

@@ -1,0 +1,351 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact" activeNav="contact">
+
+  <div class="contact-page">
+
+    <!-- LEFT: Navy Panel -->
+    <div class="contact-left">
+      <div class="contact-left-inner">
+        <span class="section-label">Get in Touch</span>
+        <h1>Let&rsquo;s Start a Conversation</h1>
+        <p>
+          Whether you have a specific challenge in mind or you&rsquo;re just exploring
+          whether there&rsquo;s a fit, I&rsquo;d love to hear from you. I respond to
+          every inquiry personally.
+        </p>
+
+        <div class="contact-details">
+          <div class="contact-detail">
+            <span class="contact-detail-label">Email</span>
+            <a href="mailto:david@davidleder.com" class="contact-detail-value">
+              david@davidleder.com
+            </a>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-detail-label">Phone</span>
+            <a href="tel:4086668877" class="contact-detail-value">
+              408.666.8877
+            </a>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-detail-label">Response time</span>
+            <span class="contact-detail-value muted">Within 48 hours</span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-detail-label">Availability</span>
+            <span class="contact-detail-value muted">Mon &ndash; Fri, 8am &ndash; 6pm PT</span>
+          </div>
+        </div>
+
+        <div class="lunch-callout">
+          <span class="callout-eyebrow">Popular First Step</span>
+          <h3>Lunch &amp; Learn</h3>
+          <p>
+            Not ready for an ongoing engagement? A Lunch &amp; Learn session is a
+            low-commitment way to see how I work &mdash; and bring real value to your
+            team in a single session.
+          </p>
+          <a href="/work-with-me" class="btn-ghost">Learn More &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RIGHT: White Form Panel -->
+    <div class="contact-right">
+      <div class="contact-right-inner">
+        <h2>Send a Message</h2>
+        <p class="form-intro">
+          Tell me a bit about what you&rsquo;re working on. The more context, the better.
+        </p>
+
+        <form class="contact-form" name="contact" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first">First Name</label>
+              <input type="text" id="first" name="first" placeholder="Jane" required />
+            </div>
+            <div class="form-group">
+              <label for="last">Last Name</label>
+              <input type="text" id="last" name="last" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+          </div>
+          <div class="form-group">
+            <label for="company">Company &amp; Role</label>
+            <input type="text" id="company" name="company" placeholder="CEO at Acme Corp" />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="" disabled selected>What&rsquo;s this about?</option>
+              <option value="advisory">Strategic Advisory</option>
+              <option value="coaching">Executive Coaching</option>
+              <option value="team">Team Alignment</option>
+              <option value="lunch">Lunch &amp; Learn Request</option>
+              <option value="speaking">Speaking Inquiry</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Share what's on your mind. What's the situation? What would success look like?"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn-teal submit-btn">Send Message &rarr;</button>
+        </form>
+
+        <p class="form-note">
+          Prefer a call? <a href="/work-with-me">Book directly here &rarr;</a>
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+</Layout>
+
+<style>
+  .contact-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+  }
+
+  .contact-left {
+    background: var(--navy);
+    padding: 140px 64px 80px;
+    position: relative;
+  }
+
+  .contact-left::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 50% at 30% 60%, rgba(42,127,127,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .contact-left-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 480px;
+  }
+
+  .contact-left .section-label {
+    display: block;
+    color: var(--teal-light);
+    margin-bottom: 16px;
+  }
+
+  .contact-left h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .contact-left-inner > p {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.75;
+    font-weight: 300;
+    margin-bottom: 48px;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 56px;
+  }
+
+  .contact-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .contact-detail:first-child {
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .contact-detail-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+  }
+
+  .contact-detail-value {
+    font-size: 1rem;
+    color: var(--white);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  a.contact-detail-value:hover {
+    color: var(--teal-light);
+  }
+
+  .contact-detail-value.muted {
+    color: rgba(255,255,255,0.55);
+    font-weight: 400;
+  }
+
+  .lunch-callout {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 32px 28px;
+  }
+
+  .callout-eyebrow {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 10px;
+  }
+
+  .lunch-callout h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .lunch-callout p {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .contact-right {
+    background: var(--white);
+    padding: 120px 64px 80px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .contact-right-inner {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .contact-right h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .form-intro {
+    font-size: 0.95rem;
+    color: var(--gray-mid);
+    margin-bottom: 36px;
+    line-height: 1.6;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .form-group label {
+    font-size: 0.83rem;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.02em;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text);
+    background: var(--off-white);
+    border: 1px solid rgba(30,58,95,0.12);
+    border-radius: 8px;
+    padding: 12px 16px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--teal);
+    background: var(--white);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 15px 32px;
+    font-size: 1rem;
+    border: none;
+    margin-top: 4px;
+  }
+
+  .form-note {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: var(--gray-mid);
+    text-align: center;
+  }
+
+  .form-note a {
+    color: var(--teal);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .form-note a:hover {
+    color: var(--teal-light);
+  }
+</style>

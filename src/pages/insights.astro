@@ -1,0 +1,421 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Insights" activeNav="insights">
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-label">Thinking &amp; Perspectives</span>
+      <h1>Insights for Leaders</h1>
+      <p>
+        Frameworks, observations, and hard-won lessons from the intersection of
+        strategy, leadership, and organizational change.
+      </p>
+    </div>
+  </div>
+
+  <!-- FILTER BUTTONS -->
+  <section class="filter-section">
+    <div class="filter-inner">
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="strategy">Strategy</button>
+        <button class="filter-btn" data-filter="leadership">Leadership</button>
+        <button class="filter-btn" data-filter="teams">Teams</button>
+        <button class="filter-btn" data-filter="execution">Execution</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED ARTICLE -->
+  <section class="featured-article">
+    <div class="featured-inner">
+      <div class="featured-tag">
+        <span class="eyebrow">Featured</span>
+      </div>
+      <div class="featured-content">
+        <div class="featured-text">
+          <span class="article-category">Strategy</span>
+          <h2>The Three Questions Every Leadership Team Avoids &mdash; and Why They&rsquo;re the Most Important</h2>
+          <p>
+            In nearly every facilitated session I run, there are questions the room
+            dances around. Not because they&rsquo;re sensitive &mdash; but because answering
+            them honestly would force a decision. Here&rsquo;s how to name them, ask them,
+            and actually get to the truth.
+          </p>
+          <div class="article-meta">
+            <span class="meta-date">April 12, 2026</span>
+            <span class="meta-divider">&middot;</span>
+            <span class="meta-read">8 min read</span>
+          </div>
+          <a href="#" class="btn-white">Read the Article &rarr;</a>
+        </div>
+        <div class="featured-visual">
+          <div class="featured-number">01</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLES GRID -->
+  <section class="articles-section">
+    <div class="articles-inner">
+      <div class="articles-grid">
+
+        <article class="article-card">
+          <div class="article-img-placeholder" data-category="Leadership"></div>
+          <div class="article-body">
+            <span class="article-category">Leadership</span>
+            <h3>Why &ldquo;Strategic Clarity&rdquo; Is a Leadership Skill, Not a Planning Exercise</h3>
+            <p>
+              Most executives conflate clarity with agreement. They&rsquo;re not the same &mdash;
+              and confusing the two is a major source of organizational drag.
+            </p>
+            <div class="article-meta">
+              <span class="meta-date">March 28, 2026</span>
+              <span class="meta-divider">&middot;</span>
+              <span class="meta-read">6 min read</span>
+            </div>
+            <a href="#" class="article-link">Read more &rarr;</a>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-img-placeholder" data-category="Teams"></div>
+          <div class="article-body">
+            <span class="article-category">Teams</span>
+            <h3>The Alignment Illusion: When Leadership Teams Think They Agree but Don&rsquo;t</h3>
+            <p>
+              Surface-level consensus is one of the most common and costly dynamics in
+              high-performing organizations. Here&rsquo;s how to tell if your team has it.
+            </p>
+            <div class="article-meta">
+              <span class="meta-date">March 14, 2026</span>
+              <span class="meta-divider">&middot;</span>
+              <span class="meta-read">5 min read</span>
+            </div>
+            <a href="#" class="article-link">Read more &rarr;</a>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-img-placeholder" data-category="Execution"></div>
+          <div class="article-body">
+            <span class="article-category">Execution</span>
+            <h3>Deciding at Speed: A Framework for Executive Decisions Under Pressure</h3>
+            <p>
+              When the stakes are high and time is short, most leaders revert to the
+              way they&rsquo;ve always decided. There&rsquo;s a better approach.
+            </p>
+            <div class="article-meta">
+              <span class="meta-date">February 21, 2026</span>
+              <span class="meta-divider">&middot;</span>
+              <span class="meta-read">7 min read</span>
+            </div>
+            <a href="#" class="article-link">Read more &rarr;</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="coming-soon-note">
+        <span class="eyebrow">More Coming Soon</span>
+        <p>New essays and frameworks are published monthly. Subscribe to get them directly.</p>
+        <form class="subscribe-form" name="subscribe" method="POST">
+          <input type="email" name="email" placeholder="your@email.com" required />
+          <button type="submit" class="btn-teal">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="cta-band-inner">
+      <span class="section-label">Work Together</span>
+      <h2>Want These Frameworks Applied to Your Situation?</h2>
+      <p>
+        Reading is useful. Working through it with your team is transformative.
+        Let&rsquo;s take the next step.
+      </p>
+      <div class="btn-group">
+        <a href="/work-with-me" class="btn-white">Book a Session</a>
+        <a href="/contact" class="btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+
+</Layout>
+
+<style>
+  .filter-section {
+    background: var(--white);
+    border-bottom: 1px solid rgba(30,58,95,0.07);
+  }
+
+  .filter-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  .filter-bar {
+    display: flex;
+    gap: 8px;
+    padding: 24px 0;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--gray-mid);
+    background: transparent;
+    border: 1px solid rgba(30,58,95,0.12);
+    border-radius: 100px;
+    padding: 7px 18px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .filter-btn:hover {
+    border-color: var(--teal);
+    color: var(--teal);
+  }
+
+  .filter-btn.active {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: var(--white);
+  }
+
+  .featured-article {
+    background: var(--navy);
+    padding: 80px 0;
+  }
+
+  .featured-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  .featured-tag {
+    margin-bottom: 24px;
+  }
+
+  .featured-content {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .featured-text .article-category {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    background: rgba(58,159,159,0.12);
+    border: 1px solid rgba(58,159,159,0.25);
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+
+  .featured-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+
+  .featured-text > p {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.75;
+    margin-bottom: 24px;
+    font-weight: 300;
+  }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 28px;
+  }
+
+  .meta-divider {
+    opacity: 0.5;
+  }
+
+  .featured-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .featured-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 8rem;
+    font-weight: 900;
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+    user-select: none;
+  }
+
+  .articles-section {
+    padding: 80px 0;
+    background: var(--off-white);
+  }
+
+  .articles-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-bottom: 72px;
+  }
+
+  .article-card {
+    background: var(--white);
+    border: 1px solid rgba(30,58,95,0.07);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(30,58,95,0.1);
+  }
+
+  .article-img-placeholder {
+    height: 180px;
+    background: linear-gradient(135deg, var(--navy) 0%, #2a4a6f 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .article-img-placeholder::after {
+    content: attr(data-category);
+    position: absolute;
+    bottom: 16px;
+    left: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .article-body {
+    padding: 28px 28px 32px;
+  }
+
+  .article-category {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 12px;
+  }
+
+  .article-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.35;
+    margin-bottom: 12px;
+  }
+
+  .article-card p {
+    font-size: 0.9rem;
+    color: var(--gray-dark);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  .article-card .article-meta {
+    color: var(--gray-mid);
+    margin-bottom: 20px;
+  }
+
+  .article-link {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--teal);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+
+  .article-link:hover {
+    color: var(--teal-light);
+  }
+
+  .coming-soon-note {
+    text-align: center;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .coming-soon-note .eyebrow {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .coming-soon-note p {
+    font-size: 0.95rem;
+    color: var(--gray-mid);
+    line-height: 1.7;
+    margin-bottom: 28px;
+  }
+
+  .subscribe-form {
+    display: flex;
+    gap: 12px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .subscribe-form input {
+    flex: 1;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text);
+    background: var(--white);
+    border: 1px solid rgba(30,58,95,0.12);
+    border-radius: 8px;
+    padding: 11px 16px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .subscribe-form input:focus {
+    border-color: var(--teal);
+  }
+
+  .subscribe-form .btn-teal {
+    padding: 11px 24px;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    border: none;
+  }
+</style>
